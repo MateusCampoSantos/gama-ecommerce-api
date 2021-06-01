@@ -1,4 +1,4 @@
-const listaProdutos = [
+export const listaProdutos = [
   {
       "codProduto": 25754,
       "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
@@ -1091,7 +1091,16 @@ const listaProdutos = [
           "nomeDepto": "Informatica"
       }
   }
-]
+];
 
-//exporta a lista de produtos
-export default listaProdutos;
+export const listaDepatamento = [ 
+{ idDepto: 1, nomeDepto: 'Adaptadores' }, 
+{ idDepto: 2, nomeDepto: 'Ferramentas' }, 
+{ idDepto: 3, nomeDepto: 'Eletronicos' }, 
+{ idDepto: 4, nomeDepto: 'Casa' }, 
+{ idDepto: 5, nomeDepto: 'Acessorios' }, 
+{ idDepto: 6, nomeDepto: 'Moveis' }, 
+{ idDepto: 7, nomeDepto: 'Tablets e Celulares' }, 
+{ idDepto: 8, nomeDepto: 'Games' }, 
+{ idDepto: 9, nomeDepto: 'Informatica' } 
+]; 
