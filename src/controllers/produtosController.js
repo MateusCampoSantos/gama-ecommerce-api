@@ -26,7 +26,7 @@ export default class ProdutosController {
       res.status(200).send(produto)
     } else {
       res.status(400).send({
-        message: 'produto já existe ou estrutura/informações invalidas, consulte a documentação'
+        message: 'produto já existe ou estrutura/informações inválidas, consulte a documentação'
       })
     }
 
@@ -42,7 +42,7 @@ export default class ProdutosController {
       if(produto){
         res.status(200).send(produto)
       } else {
-        res.status(400).send({ message: 'estrutura/informações invalidas, consulte a documentação'})
+        res.status(400).send({ message: 'estrutura/informações inválidas, consulte a documentação'})
       }
     } else {
       res.status(404).send({ message: 'produto não existe'})

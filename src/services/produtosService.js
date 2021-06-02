@@ -29,8 +29,8 @@ export default class ProdutosService {
     const produto = checaProduto(entrada);
     console.log(produto)
     if (produto) {
-      for(let i = 0; i < listaProdutos.length; i++) {
-        if(listaProdutos[i].codProduto == id){
+      for (let i = 0; i < listaProdutos.length; i++) {
+        if (listaProdutos[i].codProduto == id) {
           listaProdutos[i] = produto;
         }
         return produto;
