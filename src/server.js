@@ -11,6 +11,7 @@ const options = {
   info: {
     version: '1.0.0',
     title: 'Gama ecommerce api',
+    description: '',  
     license: {
       name: 'MIT',
     },
