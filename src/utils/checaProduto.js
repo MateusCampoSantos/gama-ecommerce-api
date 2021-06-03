@@ -1,14 +1,17 @@
-export const checaProduto = (produto) => {
-  if (produto.codProduto || produto.descricao || produto.preco || produto.qtdEstoque || produto.disponivel || produto.emDestaque || produto.departamento) {
-    if (produto.preco <= 0) {
-      return false;
-    }
-    if (produto.descricao.length < 15) {
-      return false;
-    }
-    return produto
+export const checaProduto = (produto) =>{
+  const verificarProduto = (produto.hasOwnProperty('codProduto') && produto.hasOwnProperty('descricao') && produto.hasOwnProperty('preco') && produto.hasOwnProperty('qtdEstoque') && produto.hasOwnProperty('disponivel') && produto.hasOwnProperty('emDestaque') && produto.hasOwnProperty('departamento'))
+  const verificarPreco = produto.preco <= 0
+  const verificarDescricao = ((produto.descricao.length < 3) && (typeof produto.descricao !== "string"))
 
-  } else {
-    return false
+  if(verificarProduto){
+      if(verificarPreco){
+          return false;
+      }
+      if (verificarDescricao){
+          return false
+      }
+      return produto
+  }else{
+      return false
   }
 }
