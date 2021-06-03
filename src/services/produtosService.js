@@ -7,7 +7,7 @@ export default class ProdutosService {
   };
 
   async getProduto(id) {
-    let produto = listaProdutos.find((produto) => produto.codProduto == id);
+    const produto = listaProdutos.find((produto) => produto.codProduto == id);
     return produto;
   }
 
