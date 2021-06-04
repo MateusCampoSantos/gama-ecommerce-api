@@ -121,7 +121,7 @@ routes.post('/produto', produtosController.cria)
  * @swagger
  * tags:
  *   name: Produtos
- * /produto/:id:
+ * /produto/{id}:
  *   put:
  *     tags: [Produtos]
  *     descripiton: Atualiza um produto já cadastrado na lista de produtos
