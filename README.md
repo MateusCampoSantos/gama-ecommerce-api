@@ -56,6 +56,10 @@ npm start
 Acesse a documentação deste projeto:
 > URL: http://localhost:3333/api-docs/
 
+Deploy online do projeto:
+> URL: https://gama-ecommerce-api-ntmu3.ondigitalocean.app/api-docs/
+
+
 ## Routes
 ### GET - Lista todos os produtos
 > URL: http://localhost:3333/produtos
