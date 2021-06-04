@@ -42,6 +42,15 @@ npm start
 
 </p>
 
+## Dependências
+
+- express v4.17.1
+- nodemon v2.0.7
+- sucrase v3.18.1
+- body-parser v1.19.0
+- swagger-jsdoc v6.1.0
+- swagger-ui-express v4.1.6
+
 ## Documentação
 
 Acesse a documentação deste projeto:
