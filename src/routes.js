@@ -17,8 +17,14 @@ const swaggerOptions = {
       },
       servers:[
           {
-              url: "http://localhost:3333"
-          }
+              url: "http://localhost:3333",
+              description: 'localhost server'
+          },
+          {
+            url: "https://gama-ecommerce-api-ntmu3.ondigitalocean.app",
+            description: 'digitalocean server'
+        }
+          
       ]
   },
   apis: ['./src/routes.js']
@@ -62,7 +68,7 @@ routes.get('/produtos', produtosController.getAll)
  *       - in: path
  *         name: id
  *         required: true
- *         description: Numeric ID of the user to retrieve.
+ *         description: ID numerico do produto à retornar
  *         schema:
  *           type: integer
  *     responses:
@@ -129,7 +135,7 @@ routes.post('/produto', produtosController.cria)
  *       - in: path
  *         name: id
  *         required: true
- *         description: Numeric ID of the user to retrieve.
+ *         description: ID numerico do produto à atualizar
  *         schema:
  *           type: integer
  *     requestBody:
@@ -197,7 +203,7 @@ routes.get('/departamentos', departamentosController.getAll)
  *       - in: path
  *         name: id
  *         required: true
- *         description: Numeric ID of the user to retrieve.
+ *         description: ID numerico do departamento à retornar
  *         schema:
  *           type: integer
  *     responses:

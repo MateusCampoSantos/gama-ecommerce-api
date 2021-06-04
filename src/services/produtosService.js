@@ -27,14 +27,15 @@ export default class ProdutosService {
 
   async atualizaProduto(entrada, id) {
     const produto = checaProduto(entrada);
-    console.log(produto)
     if (produto) {
+      let p
       for (let i = 0; i < listaProdutos.length; i++) {
         if (listaProdutos[i].codProduto == id) {
-          listaProdutos[i] = produto;
+          p = i
         }
-        return produto;
       }
+      listaProdutos[p] = produto;
+      return listaProdutos[p]
     } else {
       return false;
     }
