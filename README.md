@@ -2,7 +2,7 @@
 <img height="250p" margin="0" src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"><br>
 <img margin="0" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png">
 </div>
-<h1 align="center">Gama Ecommerce API</h1>
+<h1 align="center">Gama E-commerce API</h1>
 <div align="center">
     <img alt="GitHub contagem de linguagens" src="https://img.shields.io/github/languages/count/MateusCampoSantos/gama-ecommerce-api">
     <img alt="Tamanho do repositório" src="https://img.shields.io/github/languages/code-size/MateusCampoSantos/gama-ecommerce-api">
