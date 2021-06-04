@@ -42,6 +42,11 @@ npm start
 
 </p>
 
+## Documentação
+
+Acesse a documentação deste projeto:
+> URL: http://localhost:3333/api-docs/
+
 ## Routes
 ### GET - Lista todos os produtos
 > URL: http://localhost:3333/produtos
@@ -223,10 +228,16 @@ Resultado do exemplo:
 ]
 ```
 
-## Documentação
+Exemplo de erro 404:
+> ID = 555: http://localhost:3333/departamento/555
 
-Acesse a documentação deste projeto:
-> URL: http://localhost:3333/api-docs/
+Resultado do exemplo de erro 404:
+```json
+{
+  "message": "departamento não encontado"
+}
+```
+
 ## Contribuições
 
 1. Faça um Fork do projeto
