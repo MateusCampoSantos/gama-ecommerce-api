@@ -13,14 +13,14 @@ Sobre
 <p> Comentar sobre o projeto aqui</p><br>
 
 ## Tecnologias
----
+
 
 - [Node JS](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [Swagger](https://swagger.io/)
 
 ## Como rodar o projeto
----
+
 <p>
 Faça o clone do repositório com o comando:
 
