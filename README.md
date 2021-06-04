@@ -27,4 +27,29 @@ Faça o clone do repositório com o comando:
 ```js
 git clone https://github.com/MateusCampoSantos/gama-ecommerce-api 
 ```
+
+Instale as dependências do projeto, usando o comando:
+
+```js
+npm install express nodemon sucrase swagger-jsdoc swagger-ui-express
+```
+
+
 </p>
+
+## Contribuições
+
+1. Faça um Fork do projeto
+2. Crie uma Branch para sua Feature (`git checkout -b feature/SuaFeature`)
+3. Adicione suas mudanças (`git add .`)
+4. Comite suas mudanças (`git commit -m 'Adicionando uma Feature!`)
+5. Faça o Push da Branch (`git push origin feature/SuaFeature`)
+6. Abra uma Pull Request
+
+## Contatos
+
+GitHub: [Felipe José](https://github.com/fej0se)
+
+GitHub: [Lucas Miliante](https://github.com/LucasMiliante)
+
+GitHub: [Mateus Campos](https://github.com/MateusCampoSantos)
