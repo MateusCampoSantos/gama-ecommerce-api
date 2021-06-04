@@ -1,5 +1,6 @@
 <div align="center">
 <img height="250p" margin="0" src="https://cdn.freebiesupply.com/logos/large/2x/nodejs-1-logo-png-transparent.png"><br>
+<div style="font-size:100px">+</div>
 <img margin="0" src="https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png">
 </div>
 <h1 align="center">Gama Ecommerce API</h1>
