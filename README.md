@@ -184,6 +184,44 @@ Resultado do exemplo de erro 400:
 }
 ```
 
+### GET - Lista todos os departamentos
+> URL: http://localhost:3333/departamentos
+
+### GET - Busca um departamento específico pelo ID
+> URL: http://localhost:3333/departamento/:id
+
+Exemplo:
+> ID = 9: http://localhost:3333/departamento/9
+
+Resultado do exemplo:
+```json
+[
+  {
+    "nomeDepto": "Informatica",
+    "idDepto": 9,
+    "produtos": [
+      {
+        "codProduto": 25678,
+        "descricao": "DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO",
+        "preco": 750,
+        "qtdEstoque": 0,
+        "disponivel": "nao",
+        "emDestaque": "nao",
+        "departamento": 9
+      },
+      {
+        "codProduto": 27707,
+        "descricao": "FONE C/ MICROFONE JBL C50HI PRETO",
+        "preco": 7,
+        "qtdEstoque": 29,
+        "disponivel": "sim",
+        "emDestaque": "sim",
+        "departamento": 9
+      }
+    ]
+  }
+]
+```
 ## Contribuições
 
 1. Faça um Fork do projeto
