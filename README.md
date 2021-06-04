@@ -44,10 +44,10 @@ npm start
 
 ## Routes
 ### GET - Lista todos os produtos
-> URL http://localhost:3333/produtos
+> URL: http://localhost:3333/produtos
 
 ### GET - Busca o produto espesífico pelo ID
-> URL http://localhost:3333/produto/:id
+> URL: http://localhost:3333/produto/:id
 
 Exemplo: 
 > ID = 25754: http://localhost:3333/produto/25754
@@ -64,6 +64,77 @@ Resultado do exemplo:
   "departamento": 1
 }
 ```
+Exemplo de erro 404:
+> ID = 555: http://localhost:3333/produto/555
+
+Resultado do exemplo de erro 404:
+```json
+{
+  "message": "produto não encontrado"
+}
+```
+
+### PUT - Alterando produto existente
+> URL:http://localhost:3333/produto/:id
+
+Exemplo:
+> ID = 25754: http://localhost:3333/produto/25754
+
+Request body:
+```
+{
+    "codProduto": 25754,
+    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+    "preco": 5.9,
+    "qtdEstoque": 10,
+    "disponivel": "sim",
+    "emDestaque": "sim",
+    "departamento": 1
+ }
+```
+Resultado do exemplo:
+```
+{
+    "codProduto": 25754,
+    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+    "preco": 5.9,
+    "qtdEstoque": 10,
+    "disponivel": "sim",
+    "emDestaque": "sim",
+    "departamento": 1
+ }
+```
+
+Exemplo de erro 400:
+> Parametro divergente do exigido. Preço zerado.
+```
+{
+    "codProduto": 25754,
+    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+    "preco": 0,
+    "qtdEstoque": 10,
+    "disponivel": "sim",
+    "emDestaque": "sim",
+    "departamento": 1
+ }
+```
+Resultado do exemplo de erro 400
+```
+{
+  "message": "estrutura/informações inválidas, consulte a documentação"
+}
+```
+
+Exemplo de erro 404:
+> Passando um ID não existente. ID = 555.
+
+Resultado do exemplo de erro 404:
+```
+{
+  "message": "estrutura/informações inválidas, consulte a documentação"
+}
+```
+
 
 ## Contribuições
 
