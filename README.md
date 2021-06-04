@@ -10,7 +10,7 @@
 <h1 align="center">
 Sobre
 </h1>
-<p> Comentar sobre o projeto aqui</p><br>
+<p> Este projeto, tem como objetivo desevenvolver uma REST API para um e-commerce fictício, realizado durante o Gama Experience #37, afim de aplicar os conhecimentos adquiridos sobre arquitetura REST dentro de uma API. Os métodos utilizados foram uma listagem dos produtos, busca por um produto especificando seu ID, criação e adição de um novo produto a listagem dos produtos, atualização de um produto existente, listagem de departamento e busca de um departamento especificando seu ID associando aos seus produtos.</p><br>
 
 ## Tecnologias
 
