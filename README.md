@@ -1,3 +1,4 @@
+<div align="center"><img src="https://cdn.discordapp.com/attachments/848277047452499998/850350744522588170/kisspng-node-js-express-js-javascript-redis-mean-node-js-5b2d0123ca95c5.3187062015296760678298.jpg"></div>
 <h1 align="center">Gama Ecommerce API</h1>
 <div align="center">
     <img alt="GitHub contagem de linguagens" src="https://img.shields.io/github/languages/count/MateusCampoSantos/gama-ecommerce-api">
