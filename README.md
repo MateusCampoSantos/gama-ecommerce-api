@@ -31,7 +31,7 @@ git clone https://github.com/MateusCampoSantos/gama-ecommerce-api
 Instale as dependências do projeto, usando o comando:
 
 ```bash
-npm install express nodemon sucrase swagger-jsdoc swagger-ui-express
+npm install
 ```
 
 Execute o projeto
