@@ -222,6 +222,11 @@ Resultado do exemplo:
   }
 ]
 ```
+
+## Documentação
+
+Acesse a documentação deste projeto:
+> URL: http://localhost:3333/api-docs/
 ## Contribuições
 
 1. Faça um Fork do projeto
