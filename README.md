@@ -24,18 +24,46 @@ Sobre
 <p>
 Faça o clone do repositório com o comando:
 
-```js
+```bash
 git clone https://github.com/MateusCampoSantos/gama-ecommerce-api 
 ```
 
 Instale as dependências do projeto, usando o comando:
 
-```js
+```bash
 npm install express nodemon sucrase swagger-jsdoc swagger-ui-express
 ```
 
+Execute o projeto
+
+```bash
+npm start
+```
 
 </p>
+
+## Routes
+### GET - Lista todos os produtos
+> URL http://localhost:3333/produtos
+
+### GET - Busca o produto espesífico pelo ID
+> URL http://localhost:3333/produto/:id
+
+Exemplo: 
+> ID = 25754: http://localhost:3333/produto/25754
+
+Resultado do exemplo:
+```json
+{
+  "codProduto": 25754,
+  "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+  "preco": 5,
+  "qtdEstoque": 10,
+  "disponivel": "sim",
+  "emDestaque": "sim",
+  "departamento": 1
+}
+```
 
 ## Contribuições
 
