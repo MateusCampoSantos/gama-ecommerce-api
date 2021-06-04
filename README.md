@@ -153,7 +153,7 @@ Exemplo de erro 404:
 Resultado do exemplo de erro 404:
 ```json
 {
-  "message": "estrutura/informações inválidas, consulte a documentação"
+  "message": "produto não existe"
 }
 ```
 ### POST - Criando e adicionando um produto para a lista
