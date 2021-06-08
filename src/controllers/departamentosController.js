@@ -9,7 +9,7 @@ export default class DepartamentosController {
 
   async getProdutos(req, res){
     const { id } = req.params
-    const departamento = await knex('departamentos').where({id: id})
+    const departamento = await knex('departamentos').where({id: id}).first()
     if(departamento){
       const produtos = await knex('produtos').where({departamento: id})
 

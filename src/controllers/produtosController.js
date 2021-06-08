@@ -11,7 +11,7 @@ export default class ProdutosController {
 
   async getOne(req, res) {
     const { id } = req.params
-    const produto = await knex('produtos').where({codProduto: id})
+    const produto = await knex('produtos').where({codProduto: id}).first()
     if (produto){
       return res.status(200).send(produto)
     }else{
@@ -37,7 +37,7 @@ export default class ProdutosController {
     const { id } = req.params;
     const entrada = req.body;
     const produto = checaProduto(entrada)
-    const produtoExiste = await knex('produtos').where({codProduto: id})
+    const produtoExiste = await knex('produtos').where({codProduto: id}).first()
 
     if (produtoExiste){
       const updateProduto = await knex('produtos').where({codProduto: id}).update(produto)
