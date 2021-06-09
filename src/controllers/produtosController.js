@@ -40,11 +40,13 @@ export default class ProdutosController {
     const produtoExiste = await knex('produtos').where({codProduto: id}).first()
 
     if (produtoExiste){
-      const updateProduto = await knex('produtos').where({codProduto: id}).update(produto)
+      await knex('produtos').where({codProduto: id}).update(produto)
+      const updateProduto = await knex('produtos').where({codProduto: id}).first()
+
       if(updateProduto){
-        return res.status(200).send(updateProduto)
+        return res.sendStatus(200).send(updateProduto)
       } else {
-        return res.status(400).send({ message: 'estrutura/informações inválidas, consulte a documentação'})
+        return res.sendStatus(400).send({ message: 'estrutura/informações inválidas, consulte a documentação'})
       }
     } else {
       return res.status(404).send({ message: 'produto não existe'})
