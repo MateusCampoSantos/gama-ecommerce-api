@@ -1,5 +1,11 @@
-export const checaProduto = (produto) =>{
-  const verificarProduto = (produto.hasOwnProperty('codProduto') && produto.hasOwnProperty('descricao') && produto.hasOwnProperty('preco') && produto.hasOwnProperty('qtdEstoque') && produto.hasOwnProperty('disponivel') && produto.hasOwnProperty('emDestaque') && produto.hasOwnProperty('departamento'))
+export const checaProduto = (produto) => {
+  const verificarProduto = (produto.hasOwnProperty('codProduto') 
+  && produto.hasOwnProperty('descricao') 
+  && produto.hasOwnProperty('preco') 
+  && produto.hasOwnProperty('qtdProduto') 
+  && produto.hasOwnProperty('disponivel') 
+  && produto.hasOwnProperty('emDestaque') 
+  && produto.hasOwnProperty('departamento'))
 
   if(verificarProduto){
     const verificarPreco = produto.preco <= 0

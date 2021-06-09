@@ -1,17 +1,18 @@
-import { listaDepatamento, listaProdutos } from "../database/static";
+import knex from '../database/connection';
 
 export default class DepartamentosService {
   async getDepartamentos() {
-    return listaDepatamento;
+    const departamentos = await knex('departamentos')
+    return departamentos;
   }
 
   async getProdutos(id) {
-    const prods = listaProdutos.filter(p => p.departamento == id);
-    return prods
+    const produtos = await knex('produtos').where({departamento: id})
+    return produtos
   }
 
   async getDepartamento(id) {
-    const departamento = listaDepatamento.find(departamento => departamento.idDepto == id)
-    return departamento
+    const departamento = await knex('departamentos').where({idDepto: id})
+    return departamento[0] 
   }
 }

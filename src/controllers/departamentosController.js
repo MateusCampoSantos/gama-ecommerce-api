@@ -1,21 +1,24 @@
-const knex = require('../database/index')
+import DepartamentosService  from "../services/departamentosService";
+const departamentosService = new DepartamentosService();
 
 export default class DepartamentosController {
-  async getAll(req, res){
-    const departamentos = await knex('departamentos')
-
-    res.status(200).send(departamentos)
+  async getAll(req, res) {
+    const departamentos = await departamentosService.getDepartamentos();
+    res.status(200).send(departamentos);
   }
 
-  async getProdutos(req, res){
-    const { id } = req.params
-    const departamento = await knex('departamentos').where({id: id}).first()
+  async getProdutos(req, res) {
+    const { id } = req.params;
+    const departamento = await departamentosService.getDepartamento(parseInt(id))
     if(departamento){
-      const produtos = await knex('produtos').where({departamento: id})
-
-      res.status(200).send([departamento, produtos])
-    }else{
-      res.status(404).send({message: 'Departamento não encontrado'})
+      const produtos = await departamentosService.getProdutos(parseInt(id))
+      res.status(200).send([{
+        nomeDepto: departamento.nomeDepto,
+        idDepto: departamento.idDepto,
+        produtos: produtos
+      }])
+    } else {
+      res.status(404).send({message: 'departamento não encontado'})
     }
   }
 }
