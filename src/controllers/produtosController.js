@@ -51,12 +51,12 @@ export default class ProdutosController {
 
   async deleta(req, res) {
     const { id } = req.params;
-    const checaExistencia = await produtosService.getProduto(id); 
+    const checaExistencia = await produtosService.getProduto(id);
     if (checaExistencia) {
       await produtosService.deletaProduto(id);
-      res.status(200).send({ message: 'produto deletado'})
+      res.status(200).send({ message: 'produto deletado' })
     } else {
-      res.status(404).send({ message: 'produto não localizado'})
+      res.status(404).send({ message: 'produto não localizado' })
     }
   }
 }

@@ -217,4 +217,11 @@ routes.get('/departamentos', departamentosController.getAll)
 routes.get('/departamento/:id', departamentosController.getProdutos)
 
 
+routes.post('/departamento', departamentosController.criaDepartamento)
+
+routes.put('/departamento/:id', departamentosController.atualizaDepartamento)
+
+routes.delete('/departamento/:id', departamentosController.deletaDepartamento)
+
+
 export default routes;
