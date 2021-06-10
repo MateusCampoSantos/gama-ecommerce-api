@@ -11,9 +11,8 @@
     <img alt="GitHub último commit" src="https://img.shields.io/github/last-commit/MateusCampoSantos/gama-ecommerce-api">
 </div><br>
 
-<h1 align="center">
-Sobre
-</h1>
+<h1 align="center">Sobre</h1>
+
 <p> Este projeto, tem como objetivo desevenvolver uma REST API para um e-commerce fictício, realizado durante o Gama Experience #37, afim de aplicar os conhecimentos adquiridos sobre arquitetura REST dentro de uma API. Os métodos utilizados foram uma listagem dos produtos, busca por um produto especificando seu ID, criação e adição de um novo produto a listagem dos produtos, atualização de um produto existente, listagem de departamento e busca de um departamento especificando seu ID associando aos seus produtos.</p><br>
 
 ## Tecnologias
@@ -27,7 +26,6 @@ Sobre
 
 ## Como rodar o projeto
 
-<p>
 Faça o clone do repositório com o comando:
 
 ```bash
@@ -46,8 +44,17 @@ Execute o projeto
 npm start
 ```
 
-</p>
+## Conexão com Banco de Dados
 
+Edite o arquivo .env na raiz do projeto e adicione as informações do seu banco de dados, seguindo a seguinte estrutura:
+
+```env
+DATABASE_HOST=localhost
+DATABASE_USERNAME=root
+DATABASE_PASSWORD=password
+DATABASE_NAME=db_xp
+DATABASE_PORT=3306
+```
 ## Dependências
 
 - express v4.17.1
