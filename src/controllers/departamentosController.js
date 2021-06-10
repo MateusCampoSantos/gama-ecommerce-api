@@ -30,7 +30,7 @@ export default class DepartamentosController {
       if (DepartamentoExiste.nomeDepto == nomeDepto) {
         res.status(400).send({ message: 'departamento já existe' })
       } else {
-        res.status(400).send({ message: 'código departamento já utilizado' })
+        res.status(403).send({ message: 'código departamento já utilizado' })
       }
     } else {
       const departamento = await departamentosService.newDepto(idDepto, nomeDepto)

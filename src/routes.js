@@ -27,7 +27,7 @@ const swaggerOptions = {
           
       ]
   },
-  apis: ['./src/routes.ts']
+  apis: ['./src/routes.js']
 }
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
@@ -259,11 +259,11 @@ routes.get('/departamento/:id', departamentosController.getProdutos)
  *                          type: string
  *                          default: Nome do departamento
  *     responses:
- *       200:
+ *       201:
  *         description: Sucesso
  *       400:
  *         description: Departamento já existe
- *       400:
+ *       403:
  *         description: Código departamento já utilizado
  */
 routes.post('/departamento', departamentosController.criaDepartamento)
