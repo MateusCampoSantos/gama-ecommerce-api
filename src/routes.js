@@ -176,6 +176,27 @@ routes.post('/produto', produtosController.cria)
  */
 routes.put('/produto/:id', produtosController.atualiza)
 
+/**
+ * @swagger
+ * tags:
+ *   name: Produtos
+ * /produto/{id}:
+ *   delete:
+ *     tags: [Produtos]
+ *     description: Deleta um determinado produto identificado pelo ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID numerico do produto à retornar
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Produto deletado
+ *       404:
+ *         description: Produto não encontrado
+ */
 routes.delete('/produto/:id', produtosController.deleta)
 
 /**
@@ -216,11 +237,96 @@ routes.get('/departamentos', departamentosController.getAll)
  */
 routes.get('/departamento/:id', departamentosController.getProdutos)
 
-
+/**
+ * @swagger
+ * tags:
+ *   name: Departamentos
+ * /departamento:
+ *   post:
+ *     tags: [Departamentos]
+ *     descripiton: Cria e adiciona um departamento na lista de departamento
+ *     requestBody:
+ *          required: true
+ *          content:
+ *             application/json:
+ *                 schema:
+ *                    type: object
+ *                    properties:
+ *                       idDepto:
+ *                          type: integer
+ *                          default: 00
+ *                       nomeDepto:
+ *                          type: string
+ *                          default: Nome do departamento
+ *     responses:
+ *       200:
+ *         description: Sucesso
+ *       400:
+ *         description: Departamento já existe
+ *       400:
+ *         description: Código departamento já utilizado
+ */
 routes.post('/departamento', departamentosController.criaDepartamento)
 
+/**
+ * @swagger
+ * tags:
+ *   name: Departamentos
+ * /departamento/{id}:
+ *   put:
+ *     tags: [Departamentos]
+ *     descripiton: Atualiza um departamento já existente
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID numerico do departamento à retornar
+ *         schema:
+ *           type: integer
+ *     requestBody:
+ *          required: true
+ *          content:
+ *             application/json:
+ *                 schema:
+ *                    type: object
+ *                    properties:
+ *                       idDepto:
+ *                          type: integer
+ *                          default: 00
+ *                       nomeDepto:
+ *                          type: string
+ *                          default: Nome do departamento
+ *     responses:
+ *       200:
+ *         description: Departamento atualizado
+ *       404:
+ *         description: Departamento não existe
+ */
 routes.put('/departamento/:id', departamentosController.atualizaDepartamento)
 
+/**
+ * @swagger
+ * tags:
+ *   name: Departamentos
+ * /departamento/{id}:
+ *   delete:
+ *     tags: [Departamentos]
+ *     description: Deleta um determinado departamento identificado pelo ID
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         description: ID numerico do departamento à retornar
+ *         schema:
+ *           type: integer
+ *     responses:
+ *       200:
+ *         description: Departamento deletado
+ *       400:
+ *         description: Existem produtos cadastrados nesse departamento, não é possivel deleta-lo
+ *       404:
+ *         description: Departamento não encontrado
+ */
 routes.delete('/departamento/:id', departamentosController.deletaDepartamento)
 
 
