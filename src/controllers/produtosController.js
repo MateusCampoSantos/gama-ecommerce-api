@@ -3,12 +3,12 @@ const produtosService = new ProdutosService();
 
 export default class ProdutosController {
 
-  async getAll(req, res) {
+  async pegaTodos(req, res) {
     const produtos = await produtosService.getProdutos();
     res.status(200).send(produtos);
   }
 
-  async getOne(req, res) {
+  async pegaUm(req, res) {
     const { id } = req.params;
     const produto = await produtosService.getProduto(id);
     if (produto) {
@@ -46,6 +46,17 @@ export default class ProdutosController {
       }
     } else {
       res.status(404).send({ message: 'produto não existe' })
+    }
+  }
+
+  async deleta(req, res) {
+    const { id } = req.params;
+    const checaExistencia = await produtosService.getProduto(id); 
+    if (checaExistencia) {
+      await produtosService.deletaProduto(id);
+      res.status(200).send({ message: 'produto deletado'})
+    } else {
+      res.status(404).send({ message: 'produto não localizado'})
     }
   }
 }

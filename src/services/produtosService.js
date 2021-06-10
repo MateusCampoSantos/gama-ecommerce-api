@@ -35,4 +35,8 @@ export default class ProdutosService {
       return false;
     }
   }
+
+  async deletaProduto(id) {
+    await knex('produtos').where({codProduto: id}).delete()
+  }
 }
