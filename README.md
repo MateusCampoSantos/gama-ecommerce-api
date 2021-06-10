@@ -22,6 +22,8 @@ Sobre
 - [Node JS](https://nodejs.org/en/)
 - [Express](https://expressjs.com/pt-br/)
 - [Swagger](https://swagger.io/)
+- [Nodemon](https://www.npmjs.com/package/nodemon)
+- [MySQL](https://www.mysql.com/)
 
 ## Como rodar o projeto
 
@@ -54,6 +56,8 @@ npm start
 - body-parser v1.19.0
 - swagger-jsdoc v6.1.0
 - swagger-ui-express v4.1.6
+- mysql2 v2.2.5
+- knex v0.95.6
 
 ## Documentação
 
@@ -62,7 +66,6 @@ Acesse a documentação deste projeto:
 
 Deploy online do projeto:
 > URL: https://gama-ecommerce-api-ntmu3.ondigitalocean.app/api-docs/
-
 
 ## Routes
 ### GET - Lista todos os produtos
@@ -266,8 +269,5 @@ Resultado do exemplo de erro 404:
 
 ## Contatos
 
-GitHub: [Felipe José](https://github.com/fej0se)
-
-GitHub: [Lucas Miliante](https://github.com/LucasMiliante)
-
-GitHub: [Mateus Campos](https://github.com/MateusCampoSantos)
+| [<img src="https://avatars.githubusercontent.com/u/80367187?v=4" width="100"><br> @fej0se](https://github.com/fej0se) | [<img src="https://avatars.githubusercontent.com/u/46657131?v=4" width="100"><br> @LucasMiliante](https://github.com/LucasMiliante) | [<img src="https://avatars.githubusercontent.com/u/83595554?v=4" width="100"><br> @MateusCampoSantos](https://github.com/MateusCampoSantos) |
+| :----: | :----: | :----: |
