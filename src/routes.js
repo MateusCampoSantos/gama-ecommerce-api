@@ -54,7 +54,7 @@ routes.get('/', (req, res) => {
  *         description: Success
  * 
  */
-routes.get('/produtos', produtosController.getAll)
+routes.get('/produtos', produtosController.pegaTodos)
 
 /**
  * @swagger
@@ -77,7 +77,7 @@ routes.get('/produtos', produtosController.getAll)
  *       404:
  *         description: Produto não encontrado
  */
-routes.get('/produto/:id', produtosController.getOne)
+routes.get('/produto/:id', produtosController.pegaUm)
 
 /**
  * @swagger
@@ -175,6 +175,8 @@ routes.post('/produto', produtosController.cria)
  *         description: Produto não existe
  */
 routes.put('/produto/:id', produtosController.atualiza)
+
+routes.delete('/produto/:id', produtosController.deleta)
 
 /**
  * @swagger
