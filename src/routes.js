@@ -27,7 +27,7 @@ const swaggerOptions = {
           
       ]
   },
-  apis: ['./src/routes.ts']
+  apis: ['./src/routes.js']
 }
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions)
