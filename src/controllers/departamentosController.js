@@ -52,12 +52,17 @@ export default class DepartamentosController {
 
   async deletaDepartamento(req, res) {
     const { id } = req.params
-    const DepartamentoExiste = await departamentosService.getDepartamento(id)
-    if (!DepartamentoExiste) {
+    const departamentoExiste = await departamentosService.getDepartamento(id)
+    const existeProdutosNoDepartamento = await departamentosService.getProdutos(id)
+    if (!departamentoExiste) {
       res.status(404).send({ message: 'departamento não existe' })
     } else {
-      await departamentosService.deletaDepto(id);
-      res.status(200).send({ message: 'departamento deletado' })
+      if (existeProdutosNoDepartamento) {
+        res.status(400).send({ message: 'existem produtos cadastrados nesse departamento, não é possivel deleta-lo' })
+      } else {
+        await departamentosService.deletaDepto(id);
+        res.status(200).send({ message: 'departamento deletado' })
+      }
     }
   }
 
