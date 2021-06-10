@@ -8,7 +8,7 @@ export default class ProdutosService {
   };
 
   async getProduto(id) {
-    const produto = await knex('produtos').where({codProduto: id}).first()
+    const produto = await knex('produtos').where({ codProduto: id }).first()
     return produto;
   }
 
@@ -25,11 +25,11 @@ export default class ProdutosService {
     }
 
   }
-  
+
   async atualizaProduto(entrada, id) {
     const produto = checaProduto(entrada);
     if (produto) {
-      await knex('produtos').where({codProduto: id}).update(produto)
+      await knex('produtos').where({ codProduto: id }).update(produto)
       return await this.getProduto(id)
     } else {
       return false;
@@ -37,6 +37,6 @@ export default class ProdutosService {
   }
 
   async deletaProduto(id) {
-    await knex('produtos').where({codProduto: id}).delete()
+    await knex('produtos').where({ codProduto: id }).delete()
   }
 }
