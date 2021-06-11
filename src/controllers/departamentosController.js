@@ -24,17 +24,16 @@ export default class DepartamentosController {
 
   async criaDepartamento(req, res) {
     const { idDepto, nomeDepto } = req.body;
-    const DepartamentoExiste = await departamentosService.getDepartamento(idDepto)
+    const codDepartamentoExiste = await departamentosService.getDepartamento(idDepto)
+    const nomeDepartamentoExiste = await departamentosService.getByNome(nomeDepto)
 
-    if (DepartamentoExiste) {
-      if (DepartamentoExiste.nomeDepto == nomeDepto) {
-        res.status(400).send({ message: 'departamento já existe' })
-      } else {
-        res.status(403).send({ message: 'código departamento já utilizado' })
-      }
+    if (codDepartamentoExiste) {
+      return res.status(403).send({ message: 'código departamento já utilizado' })
+    } else if (nomeDepartamentoExiste) {
+      res.status(400).send({ message: 'departamento já existe' })
     } else {
-      const departamento = await departamentosService.newDepto(idDepto, nomeDepto)
-      res.status(201).send({ message: `departamento ${departamento} criado com sucesso` })
+      await departamentosService.newDepto(idDepto, nomeDepto)
+      res.status(201).send({ message: `departamento ${idDepto} criado com sucesso` })
     }
   }
 
