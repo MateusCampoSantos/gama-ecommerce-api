@@ -17,7 +17,7 @@ export default class DepartamentosService {
   }
 
   async newDepto(idDepto, nomeDepto) {
-    return await knex('departamentos').insert({ idDepto, nomeDepto })
+    await knex('departamentos').insert({ idDepto, nomeDepto })
   }
 
   async atualizaDepto(id, nomeDepto) {
@@ -26,5 +26,9 @@ export default class DepartamentosService {
 
   async deletaDepto(id) {
     await knex('departamentos').where({ idDepto: id }).delete()
+  }
+
+  async getByNome(nomeDepto) {
+    return await knex('departamentos').where({ nomeDepto }).first()
   }
 }

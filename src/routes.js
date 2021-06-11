@@ -21,7 +21,7 @@ const swaggerOptions = {
               description: 'localhost server'
           },
           {
-            url: "https://gama-ecommerce-api-ntmu3.ondigitalocean.app",
+            url: "http://157.245.252.69/api-docs",
             description: 'digitalocean server'
         }
           
