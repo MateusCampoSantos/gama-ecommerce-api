@@ -296,6 +296,36 @@ Deploy online do projeto:
     "message": "departamento não encontado"
   }
   ```
+
+  ### PUT - Alterando departamento existente
+  > URL:http://localhost:3333/departamento/:id
+
+  Exemplo:
+
+  ```json
+  {
+  "idDepto": 4,
+  "nomeDepto": "Periféricos"
+  }
+  ```
+
+  Resultado do exemplo:
+  ```json
+  {
+  "message": "departamento atualizado, novo nome: Periféricos"
+  }
+  ```
+
+  Exemplo de erro 404:
+  > Passando um ID não existente. ID = 555.
+
+  Resultado do exemplo de erro 404:
+  ```json
+  {
+  "message": "departamento não existe"
+  }
+  ```
+
 </details>
 
 
