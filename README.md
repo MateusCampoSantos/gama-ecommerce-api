@@ -72,7 +72,7 @@ Acesse a documentação deste projeto:
 > URL: http://localhost:3333/api-docs/
 
 Deploy online do projeto:
-> URL: https://gama-ecommerce-api-ntmu3.ondigitalocean.app/api-docs/
+> URL: http://157.245.252.69/api-docs/
 
 <img src="https://imgseed.xyz/img/16234061801abedc0.png" alt="Documentação">
 
