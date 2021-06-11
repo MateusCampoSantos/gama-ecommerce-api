@@ -74,19 +74,24 @@ Acesse a documentação deste projeto:
 Deploy online do projeto:
 > URL: https://gama-ecommerce-api-ntmu3.ondigitalocean.app/api-docs/
 
+<img src="https://imgseed.xyz/img/16234061801abedc0.png" alt="Documentação">
+
 ## Routes
-### GET - Lista todos os produtos
-> URL: http://localhost:3333/produtos
+<details>
+  <summary>Rotas para produtos</summary>
 
-### GET - Busca o produto espesífico pelo ID
-> URL: http://localhost:3333/produto/:id
+  ### GET - Lista todos os produtos
+  > URL: http://localhost:3333/produtos
 
-Exemplo: 
-> ID = 25754: http://localhost:3333/produto/25754
+  ### GET - Busca o produto espesífico pelo ID
+  > URL: http://localhost:3333/produto/:id
 
-Resultado do exemplo:
-```json
-{
+  Exemplo: 
+  > ID = 25754: http://localhost:3333/produto/25754
+
+  Resultado do exemplo:
+  ```json
+  {
   "codProduto": 25754,
   "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
   "preco": 5,
@@ -94,84 +99,84 @@ Resultado do exemplo:
   "disponivel": "sim",
   "emDestaque": "sim",
   "departamento": 1
-}
-```
-Exemplo de erro 404:
-> ID = 555: http://localhost:3333/produto/555
+  }
+  ```
+  Exemplo de erro 404:
+  > ID = 555: http://localhost:3333/produto/555
 
-Resultado do exemplo de erro 404:
-```json
-{
+  Resultado do exemplo de erro 404:
+  ```json
+  {
   "message": "produto não encontrado"
-}
-```
+  }
+  ```
 
-### PUT - Alterando produto existente
-> URL:http://localhost:3333/produto/:id
+  ### PUT - Alterando produto existente
+  > URL:http://localhost:3333/produto/:id
 
-Exemplo:
-> ID = 25754: http://localhost:3333/produto/25754
+  Exemplo:
+  > ID = 25754: http://localhost:3333/produto/25754
 
-Request body:
-```json
-{
-    "codProduto": 25754,
-    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
-    "preco": 5.9,
-    "qtdEstoque": 10,
-    "disponivel": "sim",
-    "emDestaque": "sim",
-    "departamento": 1
- }
-```
-Resultado do exemplo:
-```json
-{
-    "codProduto": 25754,
-    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
-    "preco": 5.9,
-    "qtdEstoque": 10,
-    "disponivel": "sim",
-    "emDestaque": "sim",
-    "departamento": 1
- }
-```
+  Request body:
+  ```json
+  {
+  "codProduto": 25754,
+  "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+  "preco": 5.9,
+  "qtdEstoque": 10,
+  "disponivel": "sim",
+  "emDestaque": "sim",
+  "departamento": 1
+  }
+  ```
+  Resultado do exemplo:
+  ```json
+  {
+  "codProduto": 25754,
+  "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+  "preco": 5.9,
+  "qtdEstoque": 10,
+  "disponivel": "sim",
+  "emDestaque": "sim",
+  "departamento": 1
+  }
+  ```
 
-Exemplo de erro 400:
-> Parametro divergente do exigido. Preço zerado.
-```json
-{
-    "codProduto": 25754,
-    "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
-    "preco": 0,
-    "qtdEstoque": 10,
-    "disponivel": "sim",
-    "emDestaque": "sim",
-    "departamento": 1
- }
-```
-Resultado do exemplo de erro 400
-```json
-{
+  Exemplo de erro 400:
+  > Parametro divergente do exigido. Preço zerado.
+  ```json
+  {
+  "codProduto": 25754,
+  "descricao": "ADAPTADOR BLUETOOH USB RECEPTOR DE AUDIO P2",
+  "preco": 0,
+  "qtdEstoque": 10,
+  "disponivel": "sim",
+  "emDestaque": "sim",
+  "departamento": 1
+  }
+  ```
+  Resultado do exemplo de erro 400
+  ```json
+  {
   "message": "estrutura/informações inválidas, consulte a documentação"
-}
-```
+  }
+  ```
 
-Exemplo de erro 404:
-> Passando um ID não existente. ID = 555.
+  Exemplo de erro 404:
+  > Passando um ID não existente. ID = 555.
 
-Resultado do exemplo de erro 404:
-```json
-{
+  Resultado do exemplo de erro 404:
+  ```json
+  {
   "message": "produto não existe"
-}
-```
-### POST - Criando e adicionando um produto para a lista
-> URL: http://localhost:3333/produtos
+  }
+  ```
+  ### POST - Criando e adicionando um produto para a lista
+  > URL: http://localhost:3333/produtos
 
-Exemplo:
-```json
-{
+  Exemplo:
+  ```json
+  {
   "codProduto": 12901,
   "descricao": "Placa de Vídeo Asus NVIDIA GeForce TUF Gaming RTX 3070, O8G, GDDR6 - TUF-RTX3070-O8G-GAMING",
   "preco": 12499.90,
@@ -179,12 +184,12 @@ Exemplo:
   "disponivel": "sim",
   "emDestaque": "nao",
   "departamento": 9
-}
-```
+  }
+  ```
 
-Resultado do exemplo:
-```json
-{
+  Resultado do exemplo:
+  ```json
+  {
   "codProduto": 12901,
   "descricao": "Placa de Vídeo Asus NVIDIA GeForce TUF Gaming RTX 3070, O8G, GDDR6 - TUF-RTX3070-O8G-GAMING",
   "preco": 12499.90,
@@ -192,13 +197,13 @@ Resultado do exemplo:
   "disponivel": "sim",
   "emDestaque": "nao",
   "departamento": 9
-}
-```
+  }
+  ```
 
-Exemplo de erro 400:
-> Produto com preço faltando
-```json
-{
+  Exemplo de erro 400:
+  > Produto com preço faltando
+  ```json
+  {
   "codProduto": 13456,
   "descricao": "Notebook Acer Aspire 3, Intel Core I3-1005G1, 4GB, 256GB SSD, 15.6´, Windows 10 Home - A315-56-330J",
   "preco": 0,
@@ -206,64 +211,71 @@ Exemplo de erro 400:
   "disponivel": "sim",
   "emDestaque": "sim",
   "departamento": 9
-}
-```
-
-Resultado do exemplo de erro 400:
-```json
-{
-  "message": "produto já existe ou estrutura/informações inválidas, consulte a documentação"
-}
-```
-
-### GET - Lista todos os departamentos
-> URL: http://localhost:3333/departamentos
-
-### GET - Busca um departamento específico pelo ID
-> URL: http://localhost:3333/departamento/:id
-
-Exemplo:
-> ID = 9: http://localhost:3333/departamento/9
-
-Resultado do exemplo:
-```json
-[
-  {
-    "nomeDepto": "Informatica",
-    "idDepto": 9,
-    "produtos": [
-      {
-        "codProduto": 25678,
-        "descricao": "DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO",
-        "preco": 750,
-        "qtdEstoque": 0,
-        "disponivel": "nao",
-        "emDestaque": "nao",
-        "departamento": 9
-      },
-      {
-        "codProduto": 27707,
-        "descricao": "FONE C/ MICROFONE JBL C50HI PRETO",
-        "preco": 7,
-        "qtdEstoque": 29,
-        "disponivel": "sim",
-        "emDestaque": "sim",
-        "departamento": 9
-      }
-    ]
   }
-]
-```
+  ```
 
-Exemplo de erro 404:
-> ID = 555: http://localhost:3333/departamento/555
+  Resultado do exemplo de erro 400:
+  ```json
+  {
+  "message": "produto já existe ou estrutura/informações inválidas, consulte a documentação"
+  }
+  ```
 
-Resultado do exemplo de erro 404:
-```json
-{
-  "message": "departamento não encontado"
-}
-```
+</details>
+
+<details>
+  <summary>Rotas dos departamentos</summary>
+
+  ### GET - Lista todos os departamentos
+  > URL: http://localhost:3333/departamentos
+
+  ### GET - Busca um departamento específico pelo ID
+  > URL: http://localhost:3333/departamento/:id
+
+  Exemplo:
+  > ID = 9: http://localhost:3333/departamento/9
+
+  Resultado do exemplo:
+  ```json
+  [
+    {
+      "nomeDepto": "Informatica",
+      "idDepto": 9,
+      "produtos": [
+        {
+          "codProduto": 25678,
+          "descricao": "DESKTOP ACER C24-963-UA91 I3-1005G1 1.2GHz/8GB/512GB SSD/23.8FHD IPS/W10/INGLES PRETO",
+          "preco": 750,
+          "qtdEstoque": 0,
+          "disponivel": "nao",
+          "emDestaque": "nao",
+          "departamento": 9
+        },
+        {
+          "codProduto": 27707,
+          "descricao": "FONE C/ MICROFONE JBL C50HI PRETO",
+          "preco": 7,
+          "qtdEstoque": 29,
+          "disponivel": "sim",
+          "emDestaque": "sim",
+          "departamento": 9
+        }
+      ]
+    }
+  ]
+  ```
+
+  Exemplo de erro 404:
+  > ID = 555: http://localhost:3333/departamento/555
+
+  Resultado do exemplo de erro 404:
+  ```json
+  {
+    "message": "departamento não encontado"
+  }
+  ```
+</details>
+
 
 ## Contribuições
 
