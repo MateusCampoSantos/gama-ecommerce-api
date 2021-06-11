@@ -38,6 +38,20 @@ Instale as dependências do projeto, usando o comando:
 npm install
 ```
 
+Edite o arquivo .env conforme explicado [aqui](https://github.com/MateusCampoSantos/gama-ecommerce-api#conexão-com-banco-de-dados)
+
+Realize a sincronização das tabelas no banco de dados
+
+```bash
+npx knex migrate:latest
+```
+
+Realize a sincronicação dos dados iniciais do projeto no banco de dados
+
+```bash
+npx knex seed:run
+```
+
 Execute o projeto
 
 ```bash
