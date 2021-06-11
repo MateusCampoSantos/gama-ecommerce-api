@@ -116,7 +116,7 @@ routes.get('/produto/:id', produtosController.pegaUm)
  *                          type: integer
  *                          default: 0
  *     responses:
- *       200:
+ *       201:
  *         description: Sucesso
  *       400:
  *         description: Produto já existe ou estrutura/informações inválidas, consulte a documentação
