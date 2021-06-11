@@ -4,6 +4,8 @@
   "description": "",
   "main": "src/server.js",
   "scripts": {
+    "database:tables": "npx knex migrate:latest",
+    "database:inserts": "npx knex seed:run",
     "start": "nodemon src/server.js"
   },
   "repository": {

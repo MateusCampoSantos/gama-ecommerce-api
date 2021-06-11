@@ -23,7 +23,7 @@ export default class ProdutosController {
     const produto = await produtosService.criaProduto(entrada);
 
     if (produto) {
-      res.status(200).send(produto)
+      res.status(201).send(produto)
     } else {
       res.status(400).send({
         message: 'produto já existe ou estrutura/informações inválidas, consulte a documentação'
