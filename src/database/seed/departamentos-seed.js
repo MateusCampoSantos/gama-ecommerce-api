@@ -14,6 +14,7 @@ exports.seed = function(knex) {
         {idDepto: 7, nomeDepto: 'Tablets e Celulares'},
         {idDepto: 8, nomeDepto: 'Games'},
         {idDepto: 9, nomeDepto: 'Informatica'},
+        {idDepto: 10, nomeDepto: 'Perifericos'},
       ]);
     });
 };

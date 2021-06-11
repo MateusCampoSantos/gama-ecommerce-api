@@ -326,6 +326,41 @@ Deploy online do projeto:
   }
   ```
 
+  ### DELETE - Deletando um departamento da lista de departamentos
+  > URL: http://localhost:3333/departamento/:id
+
+  Exemplo:
+  > ID = 10: http://localhost:3333/departamento/10
+
+  Resultado:
+
+  ```json
+  {
+  "message": "departamento deletado"
+  }
+  ```
+  
+  Exemplo de erro 400:
+  > ID = 4: http://localhost:3333/departamento/4
+
+  Resultado do erro 400:
+  ```json
+  {
+  "message": "existem produtos cadastrados nesse departamento, não é possivel deleta-lo"
+  }
+  ```
+
+  Exemplo de erro 404:
+  > Passando um ID não existente. ID = 555.
+
+  Resultado do exemplo de erro 404:
+
+  ```json
+  {
+  "message": "departamento não existe"
+  }
+  ```
+
 </details>
 
 
