@@ -208,7 +208,7 @@ Deploy online do projeto:
   ```
 
   ### POST - Criando e adicionando um produto para a lista
-  > URL: http://localhost:3333/produtos
+  > URL: http://localhost:3333/produto
 
   Exemplo:
   ```json
@@ -353,7 +353,7 @@ Deploy online do projeto:
   "message": "departamento deletado"
   }
   ```
-  
+
   Exemplo de erro 400:
   > ID = 4: http://localhost:3333/departamento/4
 
@@ -374,6 +374,57 @@ Deploy online do projeto:
   "message": "departamento não existe"
   }
   ```
+
+  ### POST - Criando e adicionando um departamento para a lista
+  > URL: http://localhost:3333/produto
+
+  Exemplo:
+  ```json
+  {
+  "idDepto": 20,
+  "nomeDepto": "Jardinagem"
+  }
+  ```
+
+  Resultado do exemplo:
+  ```json
+  {
+  "message": "departamento 20 criado com sucesso"
+  }
+  ```
+
+  Exemplo de erro 400:
+  >Passando um nome de departamento já existente
+  ```json
+  {
+  "idDepto": 11,
+  "nomeDepto": "Adaptadores"
+  }
+  ```
+
+  Resultado do exemplo de erro 400:
+  ```json
+  {
+  "message": "departamento já existe"
+  }
+  ```
+
+  Exemplo de erro 403:
+  > Passando ID já existente
+  ```json
+  {
+  "idDepto": 4,
+  "nomeDepto": "PetShop"
+  }
+  ```
+
+  Resultado do exemplo de erro 403:
+  ```json
+  {
+  "message": "código departamento já utilizado"
+  }
+  ```
+
 
 </details>
 
