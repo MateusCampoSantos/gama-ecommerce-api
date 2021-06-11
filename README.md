@@ -171,6 +171,28 @@ Deploy online do projeto:
   "message": "produto não existe"
   }
   ```
+
+  ### DELETE - Deletando um produto da lista de produtos
+  > URL: http://localhost:3333/produtos/:id
+
+  Exemplo:
+  > ID = 25754: http://localhost:3333/produto/25754
+
+  ```json
+  {
+  "message": "produto deletado"
+  }
+  ```
+
+  Exemplo de erro 404:
+  > Passando um ID não existente. ID = 555.
+
+  ```json
+  {
+  "message": "produto não localizado"
+  }
+  ```
+
   ### POST - Criando e adicionando um produto para a lista
   > URL: http://localhost:3333/produtos
 
